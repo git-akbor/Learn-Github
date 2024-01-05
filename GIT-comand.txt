@@ -33,13 +33,27 @@ check your machine if have git install : git -v
 (5) Staging on local repository:
     (A) to staging all file : git add .
     (B) to staging a single file : git add "file-name"
+    (C) to unstaging : git rm --cached "filename"
+    (D) to restore / discard changes : git restore 
 
-(06) commiting :
+(06) commit and uncommit / reset
+    commit
     (A) git commit -m "your message here"
+    (B) to add and commit togather : git commit -am "your message here" 
     (B) to check commit history : git log
     (C) to check it shortly : git log --oneline
+    (D) to exit git log : :Q
+    (E) to see commit detail : git show "commitId" or git show or git show HEAD
+    uncommit / reset
+    (A) to uncommit / reset recent commit : git reset --soft HEAD^
+    (B) to uncommit / reset and remove staging area recent commit  : git reset HEAD^
+    (C) to go back last commit, it will be uncommit all and clear all : git reset --hard HEAD^
 
-(07)
+
+(07)  
+    (A) 
+    (B) 
+
 
 (08) git branch :
     (A) make a branch : git branch "branch-name"
@@ -48,6 +62,9 @@ check your machine if have git install : git -v
     (D) to do this together : git checkout -b "branch-name"
     (E) to merge a branch with master : git merge "branch-name"
     (F) rename or treet a branch as main branch : git branch -M main
+    (G) To see local branches : git branch
+    (H) To see remote branches : git branch -r    
+    (I) To see all local and remote branches : git branch -a
 
 
 (09) remote repository :
@@ -66,3 +83,81 @@ check your machine if have git install : git -v
     (B) pull request : <!-- after make change at local branch need merge it with main branch that why need to send A
         pull request. after send the pull request main branch can accept it and merge it with main branch.
          if dont have any conflict. use git hub -->
+
+(12) git merge
+    (A) Basically merge used for two or more branch merging with main branch.
+    (B) to merge a branch with master : git merge "branch-name"
+    (c) three way merge / fast forward merge --> form master branch merge target branch. comand : git merge targetBranchName
+    (D) to see visually go the link : git-school.github.io/visualizing-git/
+
+(13) git conflict 
+        Rsolved by terminal:
+    (A) merge conflict resolved --> if both barnches code are not have in same line then you can"t merge them
+        beacouse they are conflicting each other.
+    (B) to see the conflict : git status <-- it show you unmaerge file name -->
+    (C) open the file --> slove the conflict --> commit again --> check git status
+        resolved by github :
+    (A) pull request -> compare & pull -> accept pull request: if have a conflict, it will be shown by redmark Can't automatically merge
+    (B) press resolve conflict : find and solve the conflict
+    (C) mark as resolve commmit merge Then confirm merge
+
+
+(14) Git issue:
+     <-- To slove any problems in Our project We can create a issue, also We can assign any contributor to slove this -->
+     <-- use github, go issues create an issue, to do it flow this steps  -->
+     --> new issue --> write a reliable issue name --> describe about issue -->>
+     --> assign if u have any member or self --> filter label-- kind of issue -->>
+     --> submit new issue 
+     <-- every issue have an id -->
+     --> fix the issue --> commit changes with message --> 
+     <-- check the commit if the problems get solved -->
+     --> close issue with comment or not it solve comment to resolved it -->
+     We can reopen an issue when we feel need !
+
+(15) Fork & clone
+     from github : to copy from another one's git file to my git repository, we can use fork
+     after fork, we can clone it my local repository to edit it.
+     (A) fork -> clone -> change -> add -> commit -> make pull request
+     (B) pres fork and select your tergeted git to do fork.
+     (C) to clone it in local repository, copy the repository link and go terminal : git clone "paste the link hrre"
+     (D) after cloning it will come in my local repository 
+
+(16) git collabration
+    (A) make a repository --> setting --> collabrator --> add people 
+    (B) collabrator can acces directly "no need to fork" by acces collabration request.
+    (C) owner can change permission by manage acces and set rule.
+
+(17) SSH key (scecured shell)
+    (A) open repository -> setting -> ssh and gpg keys to check avaiable ssh on github
+    (B) to check in terminal cd .ssh <-- if you have any prvious ssh key -->
+    (C) if didn't have : cd ~ -> mkdir .ssh -> cd .ssh ->
+    (D) search github ssh generating -> find the code -> copy code -> paste on terminal
+    (E) ssh-keygen -t ed25519 -C "your_email@example.com"
+    (F) yes -> give the passphares two time -> select location to save
+    (G) open the file copy the code go github 
+    (H) setting -> ssh and gpg key -> write your device name -> paste the code -> add ssh key 
+
+(18) publish website on github and share link any where
+    (A) create repository -> initilize this repository with readme
+    (B) upload file -> paste all files -> commit 
+    (C) setting -> github pages -> source -> master branch -> reload 
+    (D) your site is redy -> copy and share the url
+(19) delete repository
+    (A) select repository -> setting -> at below : danger zone -> delete this repository
+    (B) type the repository name -> delete this repository
+
+(20) git ignore
+    (A) to keep secret any file we can used gitignore 
+    (B) file type : .gitignore
+    (C) git ignore file is a hidden file
+    (D) make git ignore : touch .gitignore
+    (E) open git ignore file and write file type as below :
+        --> to ignore : filename.txt or only .txt
+        --> to un ignore : *filename.txt or only *.txt
+        --> except un ignore : !filename.txt or only !.txt
+        --> if use num or symble to ignore : filename?.txt or ?.txt
+        --> if any folder want to ignore : foldername/
+
+(21) markdown .md 
+    (A) redme.md is the summary of project. it's plain text who can visuaize in web 
+    (B) se the markdown documentation in redme.md file

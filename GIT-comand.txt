@@ -50,9 +50,9 @@ check your machine if have git install : git -v
     (C) to go back last commit, it will be uncommit all and clear all : git reset --hard HEAD^
 
 
-(07)  
-    (A) 
-    (B) 
+(07)  git remove
+    (A) If you want to disconnect your project from git :
+    (B) rm -rf .git
 
 
 (08) git branch :

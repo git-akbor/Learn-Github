@@ -5,7 +5,7 @@ check your machine if have git install : git -v
 
 (01) git configaration : 
     (A) set user name : git config --global user.name "user-name-here"
-    (B) set user email : git config --global user.emial "user-email-here"
+    (B) set user email : git config --global user.email "user-email-here"
     (C) check user name : git config user.name
     (D) check user email : git config user.email
     (E) check both togather : git config --list

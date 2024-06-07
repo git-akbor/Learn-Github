@@ -72,6 +72,7 @@ check your machine if have git install : git -v
     (B) go remote github and create a new repository with --> repository name and description
     (C) to connect remote repository : git remote add origin <!-- copy the repository link and paste at terminal -->
     (D) check connected reomte repository : git remote -v
+    (E) to find remote git repository by cmd: git ls-remote --get-url origin
 
 (10) push your code to remote repository :
     (A) push to main branch : git push -u origin main

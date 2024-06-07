@@ -133,7 +133,7 @@ check your machine if have git install : git -v
     (B) to check in terminal cd .ssh <-- if you have any prvious ssh key -->
     (C) if didn't have : cd ~ -> mkdir .ssh -> cd .ssh ->
     (D) search github ssh generating -> find the code -> copy code -> paste on terminal
-    (E) ssh-keygen -t ed25519 -C "your_email@example.com"
+    (E) cmd: ssh-keygen -o -t rsa -C "your_email@example.com"
     (F) yes -> give the passphares two time -> select location to save
     (G) open the file copy the code go github 
     (H) setting -> ssh and gpg key -> write your device name -> paste the code -> add ssh key 
